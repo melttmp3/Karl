@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>karl</title>
+<meta name="description" content="karl — games, search, music, and internet shortcuts.">
+<style>
+:root{
+  --bg:#090909;--panel:#111;--panel2:#171717;--text:#f5f5f5;--muted:#999;
+  --line:#292929;--accent:#fff;--shadow:0 18px 60px rgba(0,0,0,.35)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#222 0,#090909 42%);
+font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--text)}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(9,9,9,.82);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:28px;font-weight:900;letter-spacing:-1.5px}.navlinks{display:flex;gap:8px;flex-wrap:wrap}
+.navlinks a{padding:9px 12px;border-radius:10px;color:#bbb}.navlinks a:hover{background:#1b1b1b;color:#fff}
+.hero{padding:80px 0 50px;text-align:center}.hero h1{font-size:clamp(58px,12vw,130px);line-height:.8;margin:0 0 28px;letter-spacing:-8px}
+.hero p{color:var(--muted);margin:0 auto 26px;max-width:650px;font-size:17px}
+.search{display:flex;max-width:760px;margin:auto;background:#151515;border:1px solid #303030;border-radius:18px;padding:7px;box-shadow:var(--shadow)}
+.search input{min-width:0;flex:1;background:transparent;border:0;outline:0;color:white;font-size:17px;padding:14px}
+.search button{border:0;background:white;color:#000;font-weight:800;border-radius:12px;padding:0 20px;cursor:pointer}
+.quick{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:16px}
+.quick a{font-size:13px;color:#aaa;border:1px solid var(--line);padding:8px 12px;border-radius:999px}.quick a:hover{color:#fff;background:#151515}
+section{padding:30px 0}.sectionhead{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}
+h2{margin:0;font-size:26px;letter-spacing:-.8px}.sectionhead span{color:#777;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{min-height:150px;background:linear-gradient(145deg,#181818,#0f0f0f);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;transition:.18s}
+.card:hover{transform:translateY(-3px);border-color:#4a4a4a;background:#1b1b1b}
+.icon{font-size:31px}.tag{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#777;margin-top:8px}
+.card h3{margin:5px 0 0;font-size:18px}.card p{margin:5px 0 0;color:#888;font-size:13px}
+.music{display:grid;grid-template-columns:1fr 1fr;gap:14px}.music .card{min-height:190px}
+.footer{padding:70px 0 35px;text-align:center;color:#666;font-size:12px}
+.notice{margin:15px 0 0;padding:12px 14px;border:1px solid var(--line);border-radius:12px;color:#777;font-size:12px}
+@media(max-width:800px){.grid{grid-template-columns:repeat(2,1fr)}.music{grid-template-columns:1fr}.navlinks{display:none}}
+@media(max-width:480px){.grid{grid-template-columns:1fr 1fr}.card{min-height:135px;padding:14px}.hero{padding-top:55px}.search button{padding:0 14px}.hero h1{letter-spacing:-5px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="logo" href="#">karl</a>
+  <nav class="navlinks">
+    <a href="#games">Games</a><a href="#search">Search</a><a href="#music">Music</a>
+  </nav>
+</div></header>
+
+<main>
+<section class="hero wrap" id="search">
+  <h1>karl</h1>
+  <p>A tiny internet home for games, searching, music, and whatever else you need open in another tab.</p>
+  <form class="search" id="ddg">
+    <input id="q" autocomplete="off" placeholder="Search the web with DuckDuckGo…" aria-label="Search DuckDuckGo">
+    <button>Search</button>
+  </form>
+  <div class="quick">
+    <a href="https://duckduckgo.com/" target="_blank" rel="noopener">DuckDuckGo</a>
+    <a href="https://kbhgames.com/" target="_blank" rel="noopener">KBH Games</a>
+    <a href="https://www.spotify.com/" target="_blank" rel="noopener">Spotify</a>
+    <a href="https://soundcloud.com/" target="_blank" rel="noopener">SoundCloud</a>
+  </div>
+</section>
+
+<section class="wrap" id="games">
+  <div class="sectionhead"><h2>Games</h2><span>external game portals</span></div>
+  <div class="grid">
+    <a class="card" href="https://kbhgames.com/" target="_blank" rel="noopener"><div class="icon">🎮</div><div><div class="tag">portal</div><h3>KBH Games</h3><p>Large browser-game collection.</p></div></a>
+    <a class="card" href="https://poki.com/" target="_blank" rel="noopener"><div class="icon">🕹️</div><div><div class="tag">portal</div><h3>Poki</h3><p>Quick browser games.</p></div></a>
+    <a class="card" href="https://www.crazygames.com/" target="_blank" rel="noopener"><div class="icon">⚡</div><div><div class="tag">portal</div><h3>CrazyGames</h3><p>Action, multiplayer, 3D and more.</p></div></a>
+    <a class="card" href="https://itch.io/games/free" target="_blank" rel="noopener"><div class="icon">👾</div><div><div class="tag">indie</div><h3>itch.io</h3><p>Free indie games and experiments.</p></div></a>
+    <a class="card" href="https://www.coolmathgames.com/" target="_blank" rel="noopener"><div class="icon">🧠</div><div><div class="tag">portal</div><h3>Coolmath Games</h3><p>Puzzles, strategy and classics.</p></div></a>
+    <a class="card" href="https://www.newgrounds.com/games" target="_blank" rel="noopener"><div class="icon">💥</div><div><div class="tag">portal</div><h3>Newgrounds</h3><p>Games, animations and internet history.</p></div></a>
+    <a class="card" href="https://poki.com/en/games/2-player" target="_blank" rel="noopener"><div class="icon">👥</div><div><div class="tag">2 player</div><h3>2-Player Games</h3><p>Quick games for two people.</p></div></a>
+    <a class="card" href="https://www.miniplay.com/" target="_blank" rel="noopener"><div class="icon">🏁</div><div><div class="tag">portal</div><h3>Miniplay</h3><p>Another browser-game hub.</p></div></a>
+  </div>
+  <div class="notice">karl links to third-party game portals rather than copying or re-hosting their games. Availability and site rules are controlled by those services.</div>
+</section>
+
+<section class="wrap" id="music">
+  <div class="sectionhead"><h2>Music</h2><span>open music services</span></div>
+  <div class="music">
+    <a class="card" href="https://open.spotify.com/" target="_blank" rel="noopener"><div class="icon">♫</div><div><div class="tag">streaming</div><h3>Spotify</h3><p>Open Spotify Web Player.</p></div></a>
+    <a class="card" href="https://soundcloud.com/" target="_blank" rel="noopener"><div class="icon">☁</div><div><div class="tag">streaming</div><h3>SoundCloud</h3><p>Open SoundCloud in a new tab.</p></div></a>
+  </div>
+</section>
+</main>
+
+<footer class="footer wrap">karl · made for the open web · 2026</footer>
+
+<script>
+document.getElementById("ddg").addEventListener("submit", e=>{
+  e.preventDefault();
+  const q=document.getElementById("q").value.trim();
+  if(q) window.open("https://duckduckgo.com/?q="+encodeURIComponent(q),"_blank","noopener");
+});
+</script>
+</body>
+</html>
